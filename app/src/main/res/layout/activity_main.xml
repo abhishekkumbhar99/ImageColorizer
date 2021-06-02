@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        tools:context=".MainActivity">
+
+        <!--    <com.google.android.material.button.MaterialButton-->
+        <!--        android:layout_width=""-->
+        <!--        android:layout_height=""-->
+        <Button
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/image"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:text="Select Image"
+            app:icon="@drawable/ic_image"
+            app:iconGravity="textStart"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
+            android:layout_marginTop="24dp"
+
+            android:contentDescription="Input Image"
+            android:src="@drawable/borders"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/select"
+            app:layout_constraintStart_toStartOf="@+id/select"
+            app:layout_constraintTop_toBottomOf="@+id/select" />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
+            android:layout_marginTop="24dp"
+
+            android:contentDescription="Output Image"
+            android:src="@drawable/borders"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+        <Button
+            android:id="@+id/colorise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_corner"
+            android:text="Colorize"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="@color/purple_500"
+            app:icon="@drawable/ic_color"
+            app:iconGravity="textStart"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/image2"
+            app:layout_constraintStart_toStartOf="@+id/image2"
+            app:layout_constraintTop_toBottomOf="@+id/image2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
